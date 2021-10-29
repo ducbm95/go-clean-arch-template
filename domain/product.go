@@ -8,7 +8,7 @@ import (
 
 type ProductService interface {
 	Create(ctx context.Context, product model.Product) error
-	GetByID(ctx context.Context, productID int64) model.Product
+	GetByID(ctx context.Context, productID int64) (*model.Product, error)
 	Update(ctx context.Context, product model.Product) error
 	Delete(ctx context.Context, productID int64) error
 }
